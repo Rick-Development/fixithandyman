@@ -57,6 +57,11 @@ class _VerifyPhoneScreenState extends State<VerifyPhoneScreen> {
           ));
     } else {
       // Show error
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SignUpStep2Screen(),
+          ));
     }
   }
 

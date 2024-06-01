@@ -1,5 +1,10 @@
 import 'package:fixithandyman/util/app_constant.dart';
+import 'package:fixithandyman/views/message_screen.dart';
+import 'package:fixithandyman/views/taskscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:fixithandyman/views/home_screen.dart';
+import 'package:fixithandyman/views/search_screen.dart';
+import 'package:fixithandyman/views/profile_screen.dart';
 import '../widgets/footer.dart';
 
 class MainScreen extends StatefulWidget {
@@ -11,11 +16,11 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   static final List<Widget> _pages = <Widget>[
-    Center(child: Text('Home Screen')),
-    Center(child: Text('Messages Screen')),
-    Center(child: Text('Search Screen')),
-    Center(child: Text('Tasks Screen')),
-    Center(child: Text('Profile Screen')),
+    HomeScreen(),
+    MessageScreen(),
+    SearchScreen(),
+    TaskScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -35,7 +40,12 @@ class _MainScreenState extends State<MainScreen> {
         onItemTapped: _onItemTapped,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => _onItemTapped(2),
+        onPressed: () => {
+           Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SearchScreen()),
+    )
+        },
         backgroundColor: AppConstants.primaryColor,
         child: Icon(Icons.search, color: Colors.white),
         shape: CircleBorder(

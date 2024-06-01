@@ -1,5 +1,6 @@
 {
     "avdmanager.sdkManager": "c:\\Users\\pc\\AppData\\Local\\Android\\Sdk\\cmdline-tools\\bin\\sdkmanager.bat",
     "avdmanager.executable": "c:\\Users\\pc\\Desktop\\platform-tools\\adb.exe",
-    "avdmanager.emulator": "c:\\Users\\pc\\AppData\\Local\\Android\\Sdk\\emulator\\emulator.exe"
+    "avdmanager.emulator": "c:\\Users\\pc\\AppData\\Local\\Android\\Sdk\\emulator\\emulator.exe",
+    "avdmanager.sdkPath": "c:\\Users\\pc\\Desktop\\platform-tools"
 }
