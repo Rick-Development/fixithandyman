@@ -86,7 +86,9 @@ import 'profile_details_form_screen.dart'; // Adjust the import based on your fi
                      ),
                    );
                  },
-                 style: ElevatedButton.styleFrom(backgroundColor: AppConstants.primaryColor),
+                 style: ElevatedButton.styleFrom(backgroundColor: AppConstants.primaryColor, 
+                 foregroundColor: Colors.white
+                 ),
                  child: Text('Next'),
                ),
              ],
