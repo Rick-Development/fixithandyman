@@ -30,7 +30,7 @@ class SuccessScreen extends StatelessWidget {
               'Your profile has been successfully set up.',
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20), 
             ElevatedButton(
               onPressed: () {
                 // Handle continue action
