@@ -1,3 +1,4 @@
+import 'package:fixithandyman/util/app_constant.dart';
 import 'package:flutter/material.dart';
 
 class TaskScreen extends StatefulWidget {
@@ -39,7 +40,7 @@ class _TaskScreenState extends State<TaskScreen> with SingleTickerProviderStateM
         ],
         bottom: TabBar(
           controller: _tabController,
-          indicatorColor: Colors.purple,
+          indicatorColor: AppConstants.primaryColor,
           labelColor: Colors.white,
           unselectedLabelColor: Colors.black,
           isScrollable: true,
@@ -58,7 +59,7 @@ class _TaskScreenState extends State<TaskScreen> with SingleTickerProviderStateM
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 decoration: BoxDecoration(
-                  color: Colors.purple,
+                  color: AppConstants.primaryColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text('Ongoing 12+', style: TextStyle(fontSize: 12)),
@@ -68,7 +69,7 @@ class _TaskScreenState extends State<TaskScreen> with SingleTickerProviderStateM
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 decoration: BoxDecoration(
-                  color: Colors.purple,
+                  color: AppConstants.primaryColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text('Done 12+', style: TextStyle(fontSize: 12)),
@@ -143,7 +144,7 @@ class _TaskScreenState extends State<TaskScreen> with SingleTickerProviderStateM
                 Text(
                   'Design & Creative',
                   style: TextStyle(
-                    color: Colors.purple,
+                    color: AppConstants.primaryColor,
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
@@ -191,7 +192,7 @@ class _TaskScreenState extends State<TaskScreen> with SingleTickerProviderStateM
                     // Handle applied action
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple,
+                    backgroundColor: AppConstants.primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),

@@ -1,3 +1,4 @@
+import 'package:fixithandyman/util/app_constant.dart';
 import 'package:flutter/material.dart';
 
 class Footer extends StatelessWidget {
@@ -22,14 +23,14 @@ class Footer extends StatelessWidget {
             IconButton(
               icon: Icon(
                 Icons.home,
-                color: selectedIndex == 0 ? Colors.purple : Colors.grey,
+                color: selectedIndex == 0 ? AppConstants.primaryColor : Colors.grey,
               ),
               onPressed: () => onItemTapped(0),
             ),
             IconButton(
               icon: Icon(
                 Icons.mail,
-                color: selectedIndex == 1 ? Colors.purple : Colors.grey,
+                color: selectedIndex == 1 ? AppConstants.primaryColor : Colors.grey,
               ),
               onPressed: () => onItemTapped(1),
             ),
@@ -37,7 +38,7 @@ class Footer extends StatelessWidget {
             IconButton(
               icon: Icon(
                 Icons.assignment,
-                color: selectedIndex == 3 ? Colors.purple : Colors.grey,
+                color: selectedIndex == 3 ? AppConstants.primaryColor : Colors.grey,
               ),
               onPressed: () => onItemTapped(3),
             ),

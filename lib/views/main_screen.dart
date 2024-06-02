@@ -27,8 +27,15 @@ class _MainScreenState extends State<MainScreen> {
     setState(() {
       if (index < _pages.length) {
         _selectedIndex = index;
+        
       }
     });
+    // if(index == 2 ){
+    //    Navigator.push(
+    //   context,
+    //   MaterialPageRoute(builder: (context) => SearchScreen()),
+    // );
+    // }
   }
 
   @override
@@ -41,10 +48,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {
-           Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => SearchScreen()),
-    )
+          _onItemTapped(2)
         },
         backgroundColor: AppConstants.primaryColor,
         child: Icon(Icons.search, color: Colors.white),

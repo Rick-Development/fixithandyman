@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:fixithandyman/views/notification_screen.dart';
 import 'package:fixithandyman/views/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fixithandyman/util/app_constant.dart';
@@ -25,6 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.notifications_none),
             onPressed: () {
               // Handle notification tap
+               Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => NotificationScreen()),
+    );
             },
           ),
         ],

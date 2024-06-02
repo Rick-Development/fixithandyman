@@ -1,3 +1,4 @@
+import 'package:fixithandyman/util/app_constant.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -95,7 +96,7 @@ class ChatScreen extends StatelessWidget {
         margin: EdgeInsets.symmetric(vertical: 8),
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isSender ? Colors.purple : Colors.grey[200],
+          color: isSender ? AppConstants.primaryColor : Colors.grey[200],
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(

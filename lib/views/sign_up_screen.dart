@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
         title: const Text("Sign Up"),
         backgroundColor: AppConstants.primaryColor,
         foregroundColor: AppConstants.lightColor,
-      ),
+      ),  
       body: SingleChildScrollView(
         child: Column(
           // crossAxisAlignment: CrossAxisAlignment.center,
