@@ -1,3 +1,6 @@
+import 'package:fixithandyman/util/app_constant.dart';
+import 'package:fixithandyman/views/home_screen.dart';
+import 'package:fixithandyman/views/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class SuccessScreen extends StatelessWidget {
@@ -31,8 +34,16 @@ class SuccessScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Handle continue action
+                Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MainScreen()),
+                        );
               },
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppConstants.primaryColor,
+                foregroundColor: Colors.white
+                ),
               child: Text('Continue'),
             ),
           ],
