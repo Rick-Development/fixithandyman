@@ -1,5 +1,7 @@
 import 'package:fixithandyman/util/app_constant.dart';
+import 'package:fixithandyman/views/myprofile_screen.dart';
 import 'package:fixithandyman/views/profile_setup_intro_screen.dart';
+import 'package:fixithandyman/views/transaction_history_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -29,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50,
-                backgroundImage: AssetImage('assets/images/profile_image.png'),
+                backgroundImage: AssetImage('assets/images/Avatar.png'),
               ),
               SizedBox(height: 16),
               Text(
@@ -70,6 +72,10 @@ class ProfileScreen extends StatelessWidget {
                 icon: Icons.person_outline,
                 text: 'My Profile',
                 onTap: () {
+                  Navigator.pushReplacement(context, 
+                  MaterialPageRoute(builder: (context)  => MyProfileScreen()));
+                 
+                  
                   // Handle My Profile tap
                 },
               ),
@@ -77,6 +83,8 @@ class ProfileScreen extends StatelessWidget {
                 icon: Icons.history,
                 text: 'Transaction history',
                 onTap: () {
+                  Navigator.pushReplacement(context, 
+                  MaterialPageRoute(builder: (context)  => TransactionHistoryScreen() ));
                   // Handle Transaction history tap
                 },
               ),

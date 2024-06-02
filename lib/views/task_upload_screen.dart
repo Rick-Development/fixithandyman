@@ -1,4 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:fixithandyman/util/app_constant.dart';
+import 'package:fixithandyman/views/additional_details_screen.dart';
+import 'package:fixithandyman/views/bank_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -43,7 +46,7 @@ class _TaskUploadScreenState extends State<TaskUploadScreen> {
             LinearProgressIndicator(
               value: 0.5,
               backgroundColor: Colors.grey[300],
-              color: Colors.purple,
+              color: AppConstants.primaryColor,
             ),
             SizedBox(height: 20),
             Text(
@@ -105,9 +108,15 @@ class _TaskUploadScreenState extends State<TaskUploadScreen> {
             ElevatedButton(
               onPressed: () {
                 // Navigate to the next screen
+                 Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => BankDetailsScreen()),
+                );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple,
+                backgroundColor: AppConstants.primaryColor,
+                foregroundColor: AppConstants.whiteColor,
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
               ),
               child: Text('Next'),
