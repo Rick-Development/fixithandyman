@@ -4,6 +4,7 @@ import 'package:fixithandyman/views/login_screen.dart';
 import 'package:fixithandyman/views/myprofile_screen.dart';
 import 'package:fixithandyman/views/profile_setup_intro_screen.dart';
 import 'package:fixithandyman/views/transaction_history_screen.dart';
+import 'package:fixithandyman/views/upgrade_account_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 
@@ -64,6 +65,8 @@ class ProfileScreen extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   // Handle upgrade to premium
+                  Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=> UpgradeAccountScreen()));
                 },
                 child: Text('Upgrade to premium'),
                 style: TextButton.styleFrom(
