@@ -1,3 +1,5 @@
+import 'package:fixithandyman/views/home_screen.dart';
+import 'package:fixithandyman/views/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -27,7 +29,10 @@ class _SearchScreenState extends State<SearchScreen> {
             icon: Icon(Icons.close, color: Colors.black),
             onPressed: () {
               // Close the filter screen
-              Navigator.pop(context);
+               Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MainScreen()),
+              );
             },
           ),
         ],

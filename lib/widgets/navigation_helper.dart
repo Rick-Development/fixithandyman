@@ -1,23 +1,25 @@
+
+
 import 'package:fixithandyman/util/app_constant.dart';
-import 'package:fixithandyman/views/message_screen.dart';
-import 'package:fixithandyman/views/taskscreen.dart';
-import 'package:flutter/material.dart';
 import 'package:fixithandyman/views/home_screen.dart';
-import 'package:fixithandyman/views/search_screen.dart';
+import 'package:fixithandyman/views/message_screen.dart';
 import 'package:fixithandyman/views/profile_screen.dart';
-import '../widgets/footer.dart';
+import 'package:fixithandyman/views/search_screen.dart';
+import 'package:fixithandyman/views/taskscreen.dart';
+import 'package:fixithandyman/widgets/footer.dart';
+import 'package:flutter/material.dart';
 
-class MainScreen extends StatefulWidget {
-  int curIndex = 0;
-
-  
+class NavigationHelper extends StatefulWidget {
+  int cur_index = 0;
+  NavigationHelper({required this.cur_index});
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _NavigationHelperState createState() => 
+  _NavigationHelperState(selectedIndex: this.cur_index);
 }
 
-class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
-
+class _NavigationHelperState extends State<NavigationHelper> {
+  int selectedIndex = 0 ;
+  _NavigationHelperState( {required this.selectedIndex});
   static final List<Widget> _pages = <Widget>[
     HomeScreen(),
     MessageScreen(),
@@ -29,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
   void _onItemTapped(int index) {
     setState(() {
       if (index < _pages.length) {
-        _selectedIndex = index;
+        selectedIndex = index;
         
       }
     });
@@ -44,9 +46,9 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex],
+      body: _pages[selectedIndex],
       bottomNavigationBar: Footer(
-        selectedIndex: _selectedIndex,
+        selectedIndex: selectedIndex,
         onItemTapped: _onItemTapped,
       ),
       floatingActionButton: FloatingActionButton(

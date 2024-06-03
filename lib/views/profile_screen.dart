@@ -1,9 +1,11 @@
 import 'package:fixithandyman/util/app_constant.dart';
 import 'package:fixithandyman/views/account_setting.dart';
+import 'package:fixithandyman/views/login_screen.dart';
 import 'package:fixithandyman/views/myprofile_screen.dart';
 import 'package:fixithandyman/views/profile_setup_intro_screen.dart';
 import 'package:fixithandyman/views/transaction_history_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -73,7 +75,7 @@ class ProfileScreen extends StatelessWidget {
                 icon: Icons.person_outline,
                 text: 'My Profile',
                 onTap: () {
-                  Navigator.pushReplacement(context, 
+                  Navigator.push(context, 
                   MaterialPageRoute(builder: (context)  => MyProfileScreen()));
                  
                   
@@ -84,7 +86,7 @@ class ProfileScreen extends StatelessWidget {
                 icon: Icons.history,
                 text: 'Transaction history',
                 onTap: () {
-                  Navigator.pushReplacement(context, 
+                  Navigator.push(context, 
                   MaterialPageRoute(builder: (context)  => TransactionHistoryScreen() ));
                   // Handle Transaction history tap
                 },
@@ -100,7 +102,7 @@ class ProfileScreen extends StatelessWidget {
                 icon: Icons.settings_outlined,
                 text: 'Account Settings',
                 onTap: () {
-                  Navigator.pushReplacement(context, 
+                  Navigator.push(context, 
                   MaterialPageRoute(builder: (context)  => AccountSettingsScreen()));
                   // Handle Account Settings tap
                 },
@@ -117,6 +119,7 @@ class ProfileScreen extends StatelessWidget {
                 text: 'Sign Out',
                 textColor: Colors.red,
                 onTap: () {
+                  _showLogoutDialog(context);
                   // Handle Sign Out tap
                 },
               ),
@@ -160,6 +163,35 @@ class ProfileScreen extends StatelessWidget {
       ),
       trailing: Icon(Icons.arrow_forward_ios, size: 16),
       onTap: onTap,
+    );
+  }
+
+  void _showLogoutDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Log out'),
+          content: Text('Are you sure you want to leave?'),
+          actions: <Widget>[
+            TextButton(
+              child: Text('CANCEL'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text('YES'),
+              onPressed: () {
+                // Handle log out action
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder:  (context) => LoginScreen()),
+                );
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }
