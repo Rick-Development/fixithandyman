@@ -1,4 +1,5 @@
 import 'package:fixithandyman/views/main_screen.dart';
+import 'package:fixithandyman/views/profile_setup_intro_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fixithandyman/util/app_constant.dart';
 
@@ -40,7 +41,7 @@ class SignUpStep4Screen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   // Navigate to the next screen or home screen
-                   Navigator.push(
+                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) => MainScreen() ,

@@ -1,4 +1,5 @@
 import 'package:fixithandyman/util/app_constant.dart';
+import 'package:fixithandyman/views/account_setting.dart';
 import 'package:fixithandyman/views/myprofile_screen.dart';
 import 'package:fixithandyman/views/profile_setup_intro_screen.dart';
 import 'package:fixithandyman/views/transaction_history_screen.dart';
@@ -100,7 +101,7 @@ class ProfileScreen extends StatelessWidget {
                 text: 'Account Settings',
                 onTap: () {
                   Navigator.pushReplacement(context, 
-                  MaterialPageRoute(builder: (context)  => ProfileSetupIntroScreen()));
+                  MaterialPageRoute(builder: (context)  => AccountSettingsScreen()));
                   // Handle Account Settings tap
                 },
               ),

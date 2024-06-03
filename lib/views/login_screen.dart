@@ -1,3 +1,4 @@
+import 'package:fixithandyman/views/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fixithandyman/util/app_constant.dart';
 import '../controllers/login_controller.dart';
@@ -21,14 +22,18 @@ class _LoginScreenState extends State<LoginScreen> {
       final password = _passwordController.text;
 
       bool success = await _loginController.login(username, password);
-
-      if (success) {
-        // Handle successful login
-        print('Login successful');
-      } else {
-        // Handle unsuccessful login
-        print('Login failed');
-      }
+        Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => MainScreen()),
+              (Route<dynamic> route) => false,  // Remove all previous routes
+            );
+      // if (success) {
+      //   // Handle successful login
+      //   print('Login successful');
+      // } else {
+      //   // Handle unsuccessful login
+      //   print('Login failed');
+      // }
     }
   }
 

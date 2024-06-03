@@ -53,11 +53,12 @@ import 'profile_details_form_screen.dart'; // Adjust the import based on your fi
                    Expanded(
                      child: ListTile(
                        leading: CircleAvatar(
-                         backgroundColor: AppConstants.primaryColor,
+                         backgroundColor: Colors.grey,
                          child: Text('2', style: TextStyle(color: Colors.white)),
                        ),
                        title: Text('Verifying photo'),
-                       trailing: Icon(Icons.check_circle, color: AppConstants.primaryColor),
+                       trailing: Icon(Icons.check_circle, color: 
+                         Colors.grey,),
                      ),
                    ),
                  ],

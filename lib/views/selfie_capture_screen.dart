@@ -73,7 +73,8 @@ class _SelfieCaptureScreenState extends State<SelfieCaptureScreen> {
   }
 
   Future<void> verifySelfie(File file, BuildContext context) async {
-    final url = Uri.parse('https://your-api-endpoint.com/verify');
+    try{
+final url = Uri.parse('https://your-api-endpoint.com/verify');
     final request = http.MultipartRequest('POST', url)
       ..files.add(await http.MultipartFile.fromPath('selfie', file.path));
     final response = await request.send();
@@ -85,7 +86,18 @@ class _SelfieCaptureScreenState extends State<SelfieCaptureScreen> {
       );
     } else {
       // Handle the error
+       Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => TaskUploadScreen()),
+      );
     }
+    }catch(e){
+       Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => TaskUploadScreen()),
+      );
+    }
+    
   }
 
   @override
@@ -168,12 +180,12 @@ class _SelfieCaptureScreenState extends State<SelfieCaptureScreen> {
                           border: Border.all(color: Colors.white, width: 2),
                         ),
                       ),
-                      SizedBox(height: 20),
-                      Text(
-                        'Take your photo at arms length, make sure your whole face is visible',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
-                        textAlign: TextAlign.center,
-                      ),
+                      // SizedBox(height: 20),
+                      // Text(
+                      //   'Take your photo at arms length, make sure your whole face is visible',
+                      //   style: TextStyle(color: Colors.white, fontSize: 16),
+                      //   textAlign: TextAlign.center,
+                      // ),
                     ],
                   ),
                 ),

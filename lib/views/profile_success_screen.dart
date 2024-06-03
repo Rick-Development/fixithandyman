@@ -1,6 +1,7 @@
 import 'package:fixithandyman/util/app_constant.dart';
 import 'package:fixithandyman/views/home_screen.dart';
 import 'package:fixithandyman/views/main_screen.dart';
+import 'package:fixithandyman/views/signup_step4_screen.dart';
 import 'package:flutter/material.dart';
 
 class SuccessScreen extends StatelessWidget {
@@ -34,11 +35,16 @@ class SuccessScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Handle continue action
-                Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MainScreen()),
-                        );
+                Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => SignUpStep4Screen()),
+              (Route<dynamic> route) => false,  // Remove all previous routes
+            );
+                // Navigator.pushReplacement(
+                //           context,
+                //           MaterialPageRoute(
+                //               builder: (context) => MainScreen()),
+                //         );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppConstants.primaryColor,

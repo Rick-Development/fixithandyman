@@ -1,3 +1,4 @@
+import 'package:fixithandyman/views/profile_setup_intro_screen.dart';
 import 'package:fixithandyman/views/signup_step4_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fixithandyman/util/app_constant.dart';
@@ -53,7 +54,7 @@ class SignUpStep3Screen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SignUpStep4Screen(),
+                        builder: (context) => ProfileSetupIntroScreen(),
                       ),
                     );
                   },

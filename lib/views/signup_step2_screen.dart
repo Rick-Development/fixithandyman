@@ -1,3 +1,4 @@
+import 'package:fixithandyman/views/profile_setup_intro_screen.dart';
 import 'package:fixithandyman/views/signup_step3_screen.dart';
 import 'package:fixithandyman/views/signup_step4_screen.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,7 @@ class _SignUpStep2ScreenState extends State<SignUpStep2Screen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignUpStep4Screen(),
+                              builder: (context) => ProfileSetupIntroScreen(),
                             ),
                           );
                         },
@@ -79,7 +80,7 @@ class _SignUpStep2ScreenState extends State<SignUpStep2Screen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignUpStep4Screen(),
+                              builder: (context) => ProfileSetupIntroScreen(),
                             ),
                           );
                         },
