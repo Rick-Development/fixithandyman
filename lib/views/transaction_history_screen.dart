@@ -28,8 +28,12 @@ class TransactionHistoryScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return ListTile(
             leading: Icon(Icons.account_balance_wallet),
-            title: Text('Client Paid'),
-            subtitle: Text(transactions[index]['time']!),
+            title: Text('Client Paid',style: TextStyle(
+              color: AppConstants.primaryColor
+            ),),
+            subtitle: Text(transactions[index]['time']!,style: TextStyle(
+              color: AppConstants.primaryColor
+            ),),
             trailing: Text(transactions[index]['amount']!,
             style: TextStyle(
               color: AppConstants.primaryColor
